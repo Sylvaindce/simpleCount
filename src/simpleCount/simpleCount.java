@@ -6,6 +6,7 @@ public class simpleCount {
 	private static double result;
 	private static String operator;
 	private static String ScrnContent;
+
 	public static void main(String[] args) {
 		System.out.print("simpleCount");
 		nb1 = -0;
@@ -13,6 +14,7 @@ public class simpleCount {
 		operator = "";
 		Window calc = new Window();
 	}
+
 	public static void calcResult() {
 		switch(simpleCount.getOp()) {
 			case "+": System.out.print("Addition");

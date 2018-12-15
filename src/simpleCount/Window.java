@@ -15,10 +15,11 @@ import java.awt.event.ActionListener;
 public class Window extends JFrame{
 	private static JPanel items = new JPanel();
 	private static JLabel screen = new JLabel();
-	String[] op_butts_text = {"AC", "%", "/", "X", "-", "+", "sin", "cos", "tan", "x²", "√", "log", "exp", "="};
-	JButton[] op_butts = new JButton[op_butts_text.length];
-	String[] num_butts_text = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."};
-	JButton[] num_butts = new JButton[num_butts_text.length];
+	private static String[] op_butts_text = {"AC", "%", "/", "X", "-", "+", "sin", "cos", "tan", "x²", "√", "log", "exp", "="};
+	private static JButton[] op_butts = new JButton[op_butts_text.length];
+	private static String[] num_butts_text = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."};
+	private static JButton[] num_butts = new JButton[num_butts_text.length];
+
 	public Window(){
 		//Init de la fenetre
 		this.setTitle("simpleCount");
@@ -90,26 +91,6 @@ public class Window extends JFrame{
 					op_butts[i].addActionListener(new Operation());
 					break;
 			}
-			/*if (i == 0)
-				op_butts[i].addActionListener(new Reset());
-			else if (i == 6)
-				op_butts[i].addActionListener(new sinnbr());
-			else if (i == 7)
-				op_butts[i].addActionListener(new cosnbr());
-			else if (i == 8)
-				op_butts[i].addActionListener(new tannbr());
-			else if (i == 9)
-				op_butts[i].addActionListener(new sqnbr());
-			else if (i == 10)
-				op_butts[i].addActionListener(new sqrnbr());
-			else if (i == 11)
-				op_butts[i].addActionListener(new lognbr());
-			else if (i == 12)
-				op_butts[i].addActionListener(new expnbr());
-			else if (i == 13)
-				op_butts[i].addActionListener(new Result());		
-			else
-				op_butts[i].addActionListener(new Operation());*/
 			Ops.add(op_butts[i]);
 			i += 1;
 		}

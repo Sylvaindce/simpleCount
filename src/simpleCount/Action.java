@@ -16,15 +16,6 @@ class Operation implements ActionListener{
 			simpleCount.setNb1(Double.parseDouble(Window.getScreen()));				
 			Window.setScreen(str);
 		}
-		//else if (simpleCount.getNb1() != 0 && simpleCount.getNb2() == -0)
-		//{
-			//System.out.print("ICI c'est PARIS");
-			//System.out.print(exist);
-			//Window.setScreen(str);
-			//simpleCount.setNb2(Double.parseDouble(exist));
-			//Result.calcResult();
-			//Window.setScreen(Double.toString(simpleCount.getResult()));
-		//}
 		if (str == "%")
 		{
 			System.out.print("Pourcentage");
@@ -34,7 +25,6 @@ class Operation implements ActionListener{
 		}
 		else if (simpleCount.getNb1() != -0 && simpleCount.getNb2() == -0)
 			Window.setScreen(str);
-		//double tmp = Double.parseDouble("1234");
 	}
 }
 
@@ -60,7 +50,7 @@ class Result implements ActionListener{
 		System.out.print("Le nombre 1 est :");
 		System.out.print(simpleCount.getNb1());
 		if (simpleCount.getNb2() == -0)
-			simpleCount.setNb2(Double.parseDouble(nb2.substring(1)));
+			simpleCount.setNb2(Double.parseDouble(nb2.substring(0)));
 		if (simpleCount.getNb1() != 0 && simpleCount.getNb2() != 0 && simpleCount.getOp() != "")
 			simpleCount.calcResult();
 		else if (simpleCount.getNb1() == 0 && simpleCount.getNb2() != 0 && simpleCount.getOp() != "")
