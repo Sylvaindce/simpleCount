@@ -58,7 +58,39 @@ public class Window extends JFrame{
 			op_butts[i].setOpaque(true);
 			op_butts[i].setBorderPainted(false);
 			op_butts[i].setFont(new Font("Arial", Font.BOLD, 14));
-			if (i == 0)
+			switch (i) {
+				case 0:
+					op_butts[i].addActionListener(new Reset());
+					break;
+				case 6:
+					op_butts[i].addActionListener(new sinnbr());
+					break;
+				case 7:
+					op_butts[i].addActionListener(new cosnbr());
+					break;
+				case 8:
+					op_butts[i].addActionListener(new tannbr());
+					break;
+				case 9:
+					op_butts[i].addActionListener(new sqnbr());
+					break;
+				case 10:
+					op_butts[i].addActionListener(new sqrnbr());
+					break;
+				case 11:
+					op_butts[i].addActionListener(new lognbr());
+					break;
+				case 12:
+					op_butts[i].addActionListener(new expnbr());
+					break;
+				case 13:
+					op_butts[i].addActionListener(new Result());
+					break;
+				default:
+					op_butts[i].addActionListener(new Operation());
+					break;
+			}
+			/*if (i == 0)
 				op_butts[i].addActionListener(new Reset());
 			else if (i == 6)
 				op_butts[i].addActionListener(new sinnbr());
@@ -77,7 +109,7 @@ public class Window extends JFrame{
 			else if (i == 13)
 				op_butts[i].addActionListener(new Result());		
 			else
-				op_butts[i].addActionListener(new Operation());
+				op_butts[i].addActionListener(new Operation());*/
 			Ops.add(op_butts[i]);
 			i += 1;
 		}
